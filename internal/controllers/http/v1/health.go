@@ -13,7 +13,7 @@ type Responce struct {
 
 type healthImpl struct{}
 
-func registerHeatlthGroup(router *httptreemux.Group) {
+func registerHeatlthGroup(router *httptreemux.TreeMux) {
 	impl := &healthImpl{}
 
 	router.GET("/health", impl.health)
