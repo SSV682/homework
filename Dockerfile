@@ -6,7 +6,7 @@ COPY . .
 
 FROM base as build
 ENV OS linux
-ENV ARCH arm
+ENV ARCH amd64
 COPY --from=base /go/pkg /go/pkg
 COPY . /app
 RUN CGO_ENABLED=0 GOOS=$OS GOARCH=$ARCH \
