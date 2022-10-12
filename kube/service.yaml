@@ -7,7 +7,6 @@ spec:
     - port: 80
       targetPort: 8000
       protocol: TCP
-#      name: service-port
   selector:
     app: hw
   type: NodePort
