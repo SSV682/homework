@@ -18,3 +18,11 @@ compose-up: ### Run docker-compose
 compose-down: ### Down docker-compose
 	docker-compose down --remove-orphans
 .PHONY: compose-down
+
+kube-up: ### Run deploy
+	kubectl apply -f ./kube
+.PHONY: kube-up
+
+kube-down: ### Delete whole deploy
+	kubectl delete all --all -n m && kubectl delete ingress --all -n m
+.PHONY: kube-down
