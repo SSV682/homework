@@ -20,7 +20,7 @@ spec:
         app: hw
     spec:
       containers:
-        - image: ssv682/otus-homework-repo:latest
+        - image: ssv682/otus-homework-repo:v0.1
           name: otushw-stan
           ports:
             - name: web
