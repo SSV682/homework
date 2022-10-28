@@ -1,11 +1,11 @@
-### Домашнее задание 
+1. Создать namespace командой:
 
-Задание:
-1. *отвечает на порту 8000*
-2. *имеет http-метод*
-*GET /health/*
-*RESPONSE: {"status": "OK"}*
-3. *Cобрать локально образ приложения в докер.*
-4. *Запушить образ в dockerhub*
-5. *На выходе необходимо предоставить имя репозитория и тэг на Dockerhub*
-*ссылку на github c Dockerfile, либо приложить Dockerfile в ДЗ*
+kubectl create namespace m
+
+2. Поднять сервис командой:
+
+kubectl apply -f ./kube/
+
+3. Проверить работоспособность командой: 
+
+curl http://arch.homework/health
